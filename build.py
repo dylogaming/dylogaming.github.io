@@ -12,7 +12,7 @@ cards = "\n".join(
 )
 
 APPS = {"tts": "icon.png", "video": "assets/dylo-video.png"}
-SLOTS = [(("tts", 2), ("video", 5)), (("video", 1), ("tts", 4)), (("tts", 3), ("video", 6))]
+SLOTS = [(("tts", 2),), (), (("video", 5),)]
 
 
 def row(n):
