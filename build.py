@@ -25,6 +25,7 @@ def row(n):
 reel = "\n".join(row(n) for n in range(3))
 
 page = (ROOT / "template.html").read_text(encoding="utf-8")
-page = page.replace("{{CARDS}}", cards).replace("{{REEL}}", reel)
+counts = json.loads((ROOT / "counts.json").read_text(encoding="utf-8"))
+page = page.replace("{{CARDS}}", cards).replace("{{REEL}}", reel).replace("{{YT}}", counts["yt"]).replace("{{DC}}", counts["dc"])
 (ROOT / "index.html").write_text(page, encoding="utf-8")
 print("index.html", len(page), "bytes,", len(items), "cards")
