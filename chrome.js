@@ -8,7 +8,7 @@ else{s.insertAdjacentHTML('beforebegin',`<nav class="nav"><div class="wrap">
 </div></nav>`);
 const n=s.previousElementSibling,b=n.querySelector('.burger'),set=o=>{n.classList.toggle('open',o);b.setAttribute('aria-expanded',o)};
 b.addEventListener('click',()=>set(!n.classList.contains('open')));n.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>set(false)));
-// PROTECTED — nav glide scroll to sections, confirmed working 2026-11-01 @565ef2f. Do not modify without explicit ask.
+// PROTECTED — nav glide scroll to sections and back-to-top button, confirmed working 2026-11-01 @b46f00f. Do not modify without explicit ask.
 const glide=y=>{const y0=scrollY,d=y-y0,t0=performance.now(),ms=Math.min(650,300+Math.abs(d)/8);const f=t=>{const k=Math.min(1,(t-t0)/ms);scrollTo(0,y0+d*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
 const go=(a,e)=>{if(a.pathname!==location.pathname)return;const el=a.hash?document.querySelector(a.hash):null;e.preventDefault();history.replaceState(null,'',a.hash||a.pathname);glide(el?el.getBoundingClientRect().top+scrollY:0)};
 n.querySelectorAll('a.l,a.brand').forEach(a=>a.addEventListener('click',e=>go(a,e)));
