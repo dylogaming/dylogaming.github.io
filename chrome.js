@@ -3,7 +3,7 @@
 if(s.dataset.part==='footer')s.insertAdjacentHTML('beforebegin','<footer class="sfoot"><div class="wrap"><a href="/dylo-tts-privacy/">Privacy</a><a href="mailto:dylogamingofficial@gmail.com">Contact</a><span>&copy; 2026 DYLO Gaming LLC</span></div></footer>');
 else{s.insertAdjacentHTML('beforebegin',`<nav class="nav"><div class="wrap">
   <a class="brand" href="/" aria-label="DYLO Gaming"><img src="/assets/dylo-mark.png" alt="DYLO"></a>
-  <div class="menu" id="menu"><a class="l" href="/#unreal">Unreal</a><a class="l" href="/#apps">Apps</a><a class="l" href="/#community">Community</a></div>
+  <div class="menu" id="menu"><a class="l" href="/#unreal">Unreal</a><a class="l" href="/#apps">Apps</a><a class="l" href="/#community">Community</a><a class="l" href="https://account.dylostudio.com/account">Account</a></div>
   <button class="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></nav>`);
 const n=s.previousElementSibling,b=n.querySelector('.burger'),set=o=>{n.classList.toggle('open',o);b.setAttribute('aria-expanded',o)};
